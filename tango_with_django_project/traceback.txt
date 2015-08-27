@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/pudb/__init__.py", line 77, in runscript
+    dbg._runscript(mainpyfile)
+  File "/usr/local/lib/python2.7/dist-packages/pudb/debugger.py", line 418, in _runscript
+    self.run(statement, globals=globals_, locals=locals_)
+  File "/usr/lib/python2.7/bdb.py", line 400, in run
+    exec cmd in globals, locals
+  File "<string>", line 1, in <module>
+  File "manage.py", line 10, in <module>
+    execute_from_command_line(sys.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 338, in execute_from_command_line
+    utility.execute()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/__init__.py", line 330, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 393, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/commands/runserver.py", line 49, in execute
+    super(Command, self).execute(*args, **options)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 444, in execute
+    output = self.handle(*args, **options)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/commands/runserver.py", line 88, in handle
+    self.run(**options)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/commands/runserver.py", line 97, in run
+    autoreload.main(self.inner_run, None, options)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/autoreload.py", line 325, in main
+    reloader(wrapped_main_func, args, kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/autoreload.py", line 296, in python_reloader
+    exit_code = restart_with_reloader()
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/autoreload.py", line 282, in restart_with_reloader
+    exit_code = os.spawnve(os.P_WAIT, sys.executable, args, new_environ)
+  File "/usr/lib/python2.7/os.py", line 573, in spawnve
+    return _spawnvef(mode, file, args, env, execve)
+  File "/usr/lib/python2.7/os.py", line 546, in _spawnvef
+    wpid, sts = waitpid(pid, 0)
+OSError: [Errno 4] Interrupted system call
